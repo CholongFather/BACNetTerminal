@@ -1,0 +1,7 @@
+D:\업무\Source\repo\BACNetTeminal\BACNetTeminal\DAC\obj\Debug\Common.DAC.csprojAssemblyReference.cache
+D:\업무\Source\repo\BACNetTeminal\BACNetTeminal\DAC\obj\Debug\Common.DAC.csproj.CoreCompileInputs.cache
+D:\업무\Source\repo\BACNetTeminal\BACNetTeminal\Run\DAC.dll
+D:\업무\Source\repo\BACNetTeminal\BACNetTeminal\Run\DAC.pdb
+D:\업무\Source\repo\BACNetTeminal\BACNetTeminal\DAC\obj\Debug\Common.DAC.csproj.CopyComplete
+D:\업무\Source\repo\BACNetTeminal\BACNetTeminal\DAC\obj\Debug\DAC.dll
+D:\업무\Source\repo\BACNetTeminal\BACNetTeminal\DAC\obj\Debug\DAC.pdb

@@ -1,0 +1,10 @@
+D:\업무\Source\repo\BACNetTeminal\Run\Common.dll
+D:\업무\Source\repo\BACNetTeminal\Run\Common.pdb
+D:\업무\Source\repo\BACNetTeminal\BACNetTeminal\Common\obj\Debug\Common.BaseControl.resources
+D:\업무\Source\repo\BACNetTeminal\BACNetTeminal\Common\obj\Debug\Common.frmCommon.resources
+D:\업무\Source\repo\BACNetTeminal\BACNetTeminal\Common\obj\Debug\Common.Select.SelBox.resources
+D:\업무\Source\repo\BACNetTeminal\BACNetTeminal\Common\obj\Debug\Common.SIResource.resources
+D:\업무\Source\repo\BACNetTeminal\BACNetTeminal\Common\obj\Debug\Common.csproj.GenerateResource.cache
+D:\업무\Source\repo\BACNetTeminal\BACNetTeminal\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+D:\업무\Source\repo\BACNetTeminal\BACNetTeminal\Common\obj\Debug\Common.dll
+D:\업무\Source\repo\BACNetTeminal\BACNetTeminal\Common\obj\Debug\Common.pdb

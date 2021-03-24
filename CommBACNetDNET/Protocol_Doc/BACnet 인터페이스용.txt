@@ -1,0 +1,61 @@
+﻿// 이 포인트 규칙은 사용하지 않음
+Interface
+	If_Ipaddress : IPAddress
+	If_Value1 : Device NET
+	If_Value2 : Device ADR (HEX STRING)
+		예) 0A : ADR = new byte[]{ 0x0a }
+		0A 01 : ADR = new byte[]{ 0x0a, 0x01 }
+	*. If_Value1 또는 If_Value2 가 DBNull 또는 Trim 후 빈 문자열일 경우 NET, ADR 이 없는 것으로 처리
+	값이 적당하지 않을 경우 예외 발생
+TagList
+	Tag_objid : Object Instance
+	Tag_Type : 01 AI, 02 AO, 03 BI, 04 BO
+	Tag_objid3 : 1 AV, BV
+	Tag_value3 : GAIN,BIAS
+	Tag_Value1(공통) : 표시 소수점 자리수
+
+// 2016-03-24 김근호 // 롯데하노이 (베트남) 용으로 수정
+
+InterfaceList
+	If_Ipaddress : IPAddress
+	
+TagList
+	//Tag_objid : Device ADDR 10진수 
+	//	예) 02 : ADR = new byte[]{ 0x02 }
+	//	10 : ADR = new byte[]{ 0x0a }
+
+	Tag_objid : Device ADR (HEX STRING)
+		예) 0A : ADR = new byte[]{ 0x0a }
+		0A 01 : ADR = new byte[]{ 0x0a, 0x01 }
+	*. Tag_objid 또는 Tag_objid4 가 DBNull 또는 Trim 후 빈 문자열일 경우 NET, ADR 이 없는 것으로 처리
+
+	Tag_objid2 : Object Instance
+
+	ObjectInstance = ModuleID (5 비트) * POWER(2, 17) + ObjectInstance (17 비트)
+	=모듈넘버*POWER(2,17)+오브젝트인스턴스
+
+
+	값이 적당하지 않을 경우 예외 발생
+	Tag_Type : 01 AI (or AV), 02 AO (or AV), 03 BI (or BV), 04 BO (or BV), 07 MSI (or MSV), 08 MSO (or MSV)
+	Tag_objid3 : 1 AV, BV
+	Tag_objid4 : Device NET    0값이 있으면 ''공백으로 바꿔야함
+	Tag_Value1(공통) : 표시 소수점 자리수
+
+MSV = AO으로.. 설정
+
+SELECT *
+FROM (
+SELECT DISTINCT 
+	I.If_Id, I.If_Ipaddress, 
+	T.Tag_objid4, T.Tag_objid
+FROM InterfaceList AS I
+JOIN TagList AS T
+ON I.If_Id = T.If_Id
+WHERE I.If_Id = '" + ifId + @"'
+) AS S
+ORDER BY LEN(Tag_objid4), Tag_objid4, LEN(Tag_objid), Tag_objid
+
+SELECT Tag_Id, Tag_Type, Tag_objid3, Tag_objid2
+FROM TagList
+WHERE If_Id = '11' AND Tag_objid4 = '' AND Tag_objid = ''
+ORDER BY LEN(Tag_Id), Tag_Id

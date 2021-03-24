@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <TrackFileAccess>false</TrackFileAccess>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1929E346-BE30-4014-99D2-AFBF967F4B2B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common</RootNamespace>
+    <AssemblyName>Common</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Run\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Run\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Action\CActionItems.cs" />
+    <Compile Include="Action\CActionCollection.cs" />
+    <Compile Include="BaseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseControl.designer.cs">
+      <DependentUpon>BaseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chart\PartTrendChart.cs" />
+    <Compile Include="Ftp\clsFTP.cs" />
+    <Compile Include="Comm\Comm.cs" />
+    <Compile Include="Log\Log.cs" />
+    <Compile Include="Net\ByteEndian.cs" />
+    <Compile Include="Net\SocketPacket.cs" />
+    <Compile Include="Net\Client.cs" />
+    <Compile Include="Net\Server.cs" />
+    <Compile Include="Scenario\ActionCollection.cs" />
+    <Compile Include="Scenario\ActionItems.cs" />
+    <Compile Include="Scenario\ActivityCollection.cs" />
+    <Compile Include="Scenario\ActivityItems.cs" />
+    <Compile Include="Scenario\ScenarioCollection.cs" />
+    <Compile Include="Scenario\ScenarioItems.cs" />
+    <Compile Include="Scenario\SituationCollection.cs" />
+    <Compile Include="Scenario\SituationItems.cs" />
+    <Compile Include="SIResource.Designer.cs" />
+    <Compile Include="Tag\CTagCollection.cs" />
+    <Compile Include="Tag\CTagItems.cs" />
+    <Compile Include="ComboBoxColors.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConfigMgr.cs" />
+    <Compile Include="frmCommon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCommon.designer.cs">
+      <DependentUpon>frmCommon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GifImage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Save\CAniCollection.cs" />
+    <Compile Include="Save\CAniItems.cs" />
+    <Compile Include="Save\Cform.cs" />
+    <Compile Include="Save\Citems.cs" />
+    <Compile Include="Select\SelBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Select\SelBox.designer.cs">
+      <DependentUpon>SelBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Select\SelectControls.cs" />
+    <Compile Include="Comm\TagValue.cs" />
+    <Compile Include="Comm\CommSend.cs" />
+    <Compile Include="Zip\ZipUnZip.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icu_trendchart1.gif" />
+    <None Include="Resources\전동식커튼1.gif" />
+    <None Include="Resources\icu_trendchart.gif" />
+    <None Include="Resources\전동식커튼.gif" />
+    <None Include="Resources\box.jpg" />
+    <Content Include="Resources\Connect.bmp" />
+    <Content Include="Resources\Connect1.bmp" />
+    <None Include="Resources\ico_DI1.gif" />
+    <None Include="Resources\ico_AO1.gif" />
+    <None Include="Resources\ico_AI1.gif" />
+    <None Include="Resources\ico_txt_etc.gif" />
+    <None Include="Resources\ico_txt_DO.gif" />
+    <None Include="Resources\ico_txt_DI.gif" />
+    <None Include="Resources\ico_txt_AO.gif" />
+    <None Include="Resources\ico_txt_AI.gif" />
+    <None Include="Resources\ico_img_P.gif" />
+    <None Include="Resources\ico_rec_P.gif" />
+    <None Include="Resources\ico_label_P.gif" />
+    <None Include="Resources\ico_label.gif" />
+    <None Include="Resources\ico_button.gif" />
+    <None Include="Resources\ico_tank.gif" />
+    <None Include="Resources\ico_img.gif" />
+    <None Include="Resources\ico_unlinked.gif" />
+    <None Include="Resources\ico_rec.gif" />
+    <None Include="Resources\ico_linked.gif" />
+    <None Include="Resources\ico_etc.gif" />
+    <None Include="Resources\ico_checked.gif" />
+    <None Include="Resources\ico_pchecked.gif" />
+    <None Include="Resources\ico_DI.gif" />
+    <None Include="Resources\ico_AO.gif" />
+    <None Include="Resources\ico_AI.gif" />
+    <None Include="Resources\ico_DO.gif" />
+    <None Include="Resources\Lock.ico" />
+    <None Include="Resources\Lock.gif" />
+    <None Include="Resources\ico_btn.gif" />
+    <None Include="Resources\SizeE2.bmp" />
+    <None Include="Resources\SizeE1.bmp" />
+    <None Include="Resources\SizeE.bmp" />
+    <None Include="Resources\ico_tank_half.gif" />
+    <None Include="Resources\ibtn_DO.gif" />
+    <None Include="Resources\ibtn_DI.gif" />
+    <None Include="Resources\ibtn_AO.gif" />
+    <None Include="Resources\ibtn_AI.gif" />
+    <None Include="Resources\ibtn_etc.gif" />
+    <None Include="Resources\보기1.gif" />
+    <None Include="Resources\ico_checkbox_x.gif" />
+    <None Include="Resources\pointpicture.jpg" />
+    <None Include="Resources\pointbox.jpg" />
+    <None Include="Resources\picture.jpg" />
+    <None Include="Resources\pointtext.jpg" />
+    <None Include="Resources\label.jpg" />
+    <None Include="Resources\ico_checked_blue.gif" />
+    <None Include="Resources\ico_unchecked.gif" />
+    <None Include="Resources\ico_unchecked.ico" />
+    <None Include="Resources\ico_checked.ico" />
+    <None Include="Scenario\ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCommon.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Select\SelBox.resx">
+      <DependentUpon>SelBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIResource.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
